@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws of Hope - Animal Charity</title>
+  <style>
+    /* -------- BASIC STYLES -------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* -------- HEADER -------- */
+    header {
+      background: #2e8b57;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* -------- HERO SECTION -------- */
+    .hero {
+      height: 85vh;
+      background: url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 15px 0 25px 0;
+    }
+
+    .hero button {
+      padding: 12px 30px;
+      background: #ffd700;
+      border: none;
+      border-radius: 8px;
+      color: #333;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    /* -------- SECTIONS -------- */
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #2e8b57;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    /* -------- MISSION -------- */
+    .mission {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* -------- PROGRAMS -------- */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      width: 260px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    /* -------- DONATION -------- */
+    .donate {
+      background: #2e8b57;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .donate h2 {
+      color: #ffd700;
+    }
+
+    .donate p {
+      margin: 20px 0;
+      font-size: 1.1rem;
+    }
+
+    .donate button {
+      padding: 12px 25px;
+      background: #ffd700;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .donate button:hover {
+      background: #ffcc00;
+      transform: scale(1.05);
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      background: #1f5b3d;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ---------- HEADER ---------- -->
+  <header>
+    <h1>Paws of Hope</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#programs">Programs</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ---------- HERO SECTION ---------- -->
+  <section id="home" class="hero">
+    <h2>Together We Can Save Lives</h2>
+    <p>Join us in protecting and caring for stray and abandoned animals.</p>
+    <button onclick="scrollToSection('donate')">Donate Now</button>
+  </section>
+
+  <!-- ---------- MISSION SECTION ---------- -->
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p class="mission">
+      At <strong>Paws of Hope</strong>, our mission is to rescue, rehabilitate, and rehome animals in need. 
+      We believe every animal deserves love, care, and a safe home. Through our community outreach, 
+      adoption drives, and vaccination campaigns, we strive to create a compassionate world for animals.
+    </p>
+  </section>
+
+  <!-- ---------- PROGRAMS SECTION ---------- -->
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601758124095-1ec2a97a8fa0?auto=format&fit=crop&w=800&q=80" alt="Rescue Program">
+        <h3>Animal Rescue</h3>
+        <p>We provide emergency rescue services for injured and abandoned animals 24/7.</p>
+      </div>
+      <div class="card">
+        <
